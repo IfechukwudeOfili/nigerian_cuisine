@@ -1,0 +1,519 @@
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Rakkas&display=swap');
+
+body {
+  width: 100%;
+  margin: 0;
+}
+
+ul{
+  padding: 0;
+}
+.header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.leftHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.rightHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+#nigerianFlag {
+  width: 75px; /* Adjust the width and height as needed */
+  height: 50px;
+  display: flex;
+  border-radius: 10px;
+}
+
+.green {
+  flex: 1;
+  background-color: #008751; /* Nigerian green color */
+}
+.green:nth-child(1) {
+  border-radius: 10px 0 0 10px;
+}
+.green:last-child {
+  border-radius: 0px 10px 10px 0px;
+}
+.white {
+  flex: 1;
+  background-color: #ffffff; /* White color */
+}
+
+#logoText {
+  font-size: 1.2rem;
+  font-family: "Young Serif", serif;
+}
+
+.logo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.navLinks {
+  font-family: sans-serif;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.15rem;
+  gap: 10px;
+}
+
+.search {
+  padding: 0px 10px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+
+input {
+  height: 20px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  width: 130px;
+  font-size: 1.12rem;
+}
+
+#cart {
+  font-size: 1.2rem;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  width: fit-content;
+}
+.mobileNav{
+  display: none;
+}
+@media (max-width: 750px) {
+  #nigerianFlag{
+    width: 50px;
+    height: 30px;
+  }
+  .header .navLinks{
+    font-size: 1rem;
+  }
+  .search{
+    font-size: 0.8rem;
+  }
+  .search input{
+    width: 75px;
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 450px){
+.header .navLinks{
+    display: none;
+  }
+.mobileNav{
+  width: 100%;
+  display: block;
+}
+.mobileNav .navLinks{
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+.search input{
+  width: 50px;
+  font-size: 0.5rem;
+}
+@media (max-width: 300px){
+  .search{
+    display: none;
+  }
+}
+}
+.bannerBtns {
+  display: flex;
+  padding: 50px 0px 0px 0px;
+  justify-content:flex-start;
+  gap: 20px;
+}
+.pillButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  min-width: fit-content;
+  width: 175px;
+  height: fit-content;
+  border-radius: 50px;
+  color: #ffffff;
+  box-shadow: 5px 10px 5px 0px rgba(105, 103, 103, 0.5);
+}
+.pillButton p {
+  padding-right: 10px;
+  font-size: 1.15rem;
+  margin: 0;
+}
+
+.roundButton {
+  font-size: 1.15rem;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  color: #ffffff;
+}
+
+#banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.bannerText {
+  padding: 70px 20px 0px 70px;
+  font-family: sans-serif;
+}
+.bannerText h1 {
+  font-family: "Young Serif", serif;
+  font-size: 3.5rem;
+}
+.bannerImg{
+  height: 70vh;
+}
+.bannerImg img{
+  object-fit: contain;
+  height: 100%;
+}
+@media (max-width: 900px) {
+  .bannerImg{
+    display: none;
+  }
+  #banner{
+    grid-template-columns: 1fr;
+    padding-left: 20px;
+  }
+
+  .bannerText h1{
+    font-size: 2rem;
+  }
+  .bannerText {
+    padding: 10px;
+    font-family: sans-serif;
+  }
+  .caption{
+    font-size: 0.7rem;
+    line-height: 1;
+  }
+  .bannerBtns{
+    padding-top: 10px;
+    justify-content: flex-start;
+    gap: 20px;
+  }
+  .bannerBtns .pillButton{
+    width: 75px;
+  }
+  .bannerBtns .pillButton p{
+    padding-left: 10px;
+    font-size: 0.7rem;
+  }
+  .bannerBtns .pillButton .roundButton{
+    font-size: 0.7rem;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+#stats{
+  height: 20vh;
+  display: flex;
+  padding: 40px 70px;
+  justify-content: space-between;
+  align-items: center;
+}
+#stats h1{
+  font-size: 2rem;
+  margin: 0;
+  font-family: 'Rakkas', cursive;
+}
+#stats p{
+  margin: 0;
+  font-size: 1.3rem;
+  font-family: sans-serif;
+  color: rgb(78, 78, 78);
+}
+.stat{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#stats h1 span{
+  font-size: 1.3rem;
+  color: green;
+}
+@media (max-width: 900px){
+  #stats{
+    padding: 20px 50px;
+    height: 15vh;
+  }
+  #stats h1{
+    font-size: 1.5rem;
+  }
+  #stats p{
+    font-size: 0.7rem;
+  }
+}
+@media (max-width: 450px){
+  #stats{
+    padding: 20px 20px;
+    height: 10vh;
+  }
+  #stats h1{
+    font-size: 1.2rem;
+  }
+  #stats p{
+    font-size: 0.5rem;
+  }
+}
+#ourStory{
+  display: flex;
+  align-items: center;
+}
+#ourStoryImg{
+  width: 35vw;
+  height: 35vw;
+  padding-left: 75px;
+
+}
+
+#ourStoryImg img{
+  height: 100%;
+  background-size: contain;
+}
+
+#ourStoryText{
+  padding: 70px;
+  color: #ffffff;
+  background-color: rgb(98 21 16)
+}
+
+#ourStoryText h1{
+  font-family: "Young Serif", serif;
+  font-size: 3rem;
+  text-align: center;
+}
+#ourStoryText p{
+  font-family: sans-serif;
+  font-size: 1.4rem;
+  line-height: 30px;
+  text-align: center;
+}
+@media (max-width:900px) {
+  #ourStoryText h1{
+    font-size: 2rem;
+}
+#ourStoryText p{
+  font-family: sans-serif;
+  font-size: 1.15rem;
+  line-height: 30px;
+  text-align: center;
+}
+}
+@media (max-width:700px){
+  #ourStoryImg{
+    display: none;
+  }
+}
+@media (max-width:500px){
+  #ourStoryText h1{
+    font-size: 1.5rem;
+}
+#ourStoryText p{
+  font-family: sans-serif;
+  font-size: 1rem;
+  line-height: 20px;
+  text-align: center;
+}
+}
+
+.specialsTitle{
+  text-align: center;
+  font-size: 3rem;
+  font-family: sans-serif;
+  color: rgb(98 21 16);
+}
+.specialsDescription{
+  text-align:center;
+   padding: 20px 50px;
+   font-size: 1.05rem;
+}
+#specialsCardsContainer{
+  padding: 50px 100px;
+  display: flex;
+ gap: 50px;
+}
+.rightSpecialsCards{
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+.leftSpecialsCards{
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+.specialsCard{
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  box-shadow: 0px 10px 10px 3px rgba(0, 0, 0, 0.454);
+  padding: 50px 30px;
+}
+
+.specialsCardImg{
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  
+  overflow: hidden;
+}
+.specialsCardImg img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.specialsCardText{
+  font-family: sans-serif;
+  text-align: center;
+}
+.specialsCardText h1{
+  font-family: "Young Serif", serif;
+  font-size: 1.5rem;
+}
+.specialsCardText p{
+  color: rgba(0, 0, 0, 0.603);
+}
+.specialsCardPriceline{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.specialsCardPriceline p{
+  font-size: 1.4rem;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+@media (max-width: 950px) {
+  #specialsCardsContainer{
+    display: block;
+  }
+}
+@media (max-width: 450px){
+  .specialsCard{
+    min-width: 300px;
+    padding: 10px;
+  }
+  #specialsCardsContainer{
+    display: block;
+    padding: 25px;
+  }
+}
+#printMenu{
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  padding: 100px;
+  background-color: #fff7e8;
+  align-items: center;
+}
+#printMenuTitle{
+  text-align: center;
+  color: #371e32;
+  font-size: 3rem;
+  font-family: "Young Serif", serif;
+}
+
+#printMenuDesc{
+  text-align: center;
+  font-size: 1.1rem;
+  font-family: sans-serif;
+  font-weight: lighter;
+}
+.printMenuBtns{
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 50px;
+  gap: 15px;
+  font-family: sans-serif;
+}
+@media (max-width:900px) {
+  #printMenu{
+    padding: 40px;
+  }
+}
+@media (max-width:750px) {
+  #printmenu{
+    padding: 20px;
+  }
+  #printMenuTitle{
+    font-size: 2rem;
+  }
+  #printMenuDesc{
+    font-size: 1rem;
+  }
+  .printMenuBtns{
+    padding-top: 10px;
+    justify-content: flex-start;
+    gap: 20px;
+    margin: 0;
+  }
+  .printMenuBtns .pillButton{
+    width: 75px;
+    padding-left: 10px;
+  }
+  .printMenuBtns .pillButton p{
+    padding-left: 10px;
+    font-size: 0.7rem;
+  }
+  .printMenuBtns .pillButton .roundButton{
+    font-size: 0.7rem;
+    width: 30px;
+    height: 30px;
+  }
+}
+.footer{
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #371d32;
+  font-family: sans-serif;
+  color: rgb(169 150 167);
+}
+
+.footerLinks{
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: rgb(169 150 167);
+  font-size: 1.1rem;
+  gap: 10px;
+}
+
+.socials{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.3rem;
+  gap: 20px;
+}
